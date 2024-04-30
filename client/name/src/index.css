@@ -1,9 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-input {
-  background-color: #E3E7FC;
-  
 
-}
 
 @media (prefers-color-scheme: light) {
   :root {
