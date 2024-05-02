@@ -12,7 +12,7 @@ export const Navbar =()=>{
         <div className='md:min-w-0 flex  items-center  py-4 px-14 '>
             <div className='flex justify-center items-center gap-2 mr-52'>
               <img src={logo} className='w-10 h-10'/>
-              <p>Skillance</p>
+              <a href="/">Skillance</a>
             </div>
             <div className='flex mr-32 ml-32 gap-8 '>
               <Link to="/" className="text-decoration-line:none">Home</Link>
