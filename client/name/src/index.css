@@ -7,12 +7,139 @@
 @media (prefers-color-scheme: light) {
   :root {
     color: #000000;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
   }
   a:hover {
     color: #000000;
   }
-  button {
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
+}
+
+
+
+.container{
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 500px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: 'SF pro display'; 
+  src: url('C:\Users\PC\Downloads\sf-pro-display-cufonfonts') format('truetype'); 
+}
+
+h3{
+  font-family: 'SF pro display';
+  font-size:x-large;
+  font-weight: 1000;
+}
+
+h4{
+  font-family: 'SF pro display';
+  font-size:large;
+  font-weight: 800;
+}
+
+.custom-text {
+  font-family: 'SF pro display', sans-serif; 
+  font-size: 16px;
+  text-align: center;
+}
+
+.custom-text-bold {
+  font-family: 'SF pro display', sans-serif; 
+  font-size: 20px;
+  text-align: center;
+  font-weight: 750;
+}
+
+.btn {
+  display: inline-block;
+  background: #647DFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'SF pro display', sans-serif;
+}
+
+.btn:hover {
+  color: #000000; /* Change the color to red when hovered */
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #C4CCF9; /* Text color */
+  border-radius: 50%; /* Makes the button round */
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  font-size: 24px; /* Adjust font size */
+  line-height: 40px; /* Vertically center text */
+}
+
+.slick-next:hover{
+  background-color: #C4CCF9; 
+}
+
+.slick-prev:hover{
+  background-color: #C4CCF9; 
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+
+.project{
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding:  0px 20px;
+  font-family: 'SF pro display', sans-serif;
+}
+
+section{
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.cards{
+  
+}
+
+.card{
+  /* flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px); */
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: .3s;
+  border: 2px solid transparent;
+}
+
+.card:hover{
+  border-color: #818CF8;
+  cursor: pointer;
+}
+
+.profilink{
+  position: absolute;
+  bottom: 15px;
+  margin-left: 160px;
+}
+
+.profilink:hover{
+  text-decoration: underline;
 }
