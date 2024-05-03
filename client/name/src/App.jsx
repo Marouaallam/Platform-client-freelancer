@@ -9,6 +9,8 @@ import BannerImage from './components/BannerImage.jsx';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Profile } from './pages/profile.jsx';
+import { AdminDashboard } from './pages/admin.jsx';
 
 function App() {
   return(
@@ -19,6 +21,8 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
+           <Route path="/profile" element={<Profile />}/>
+           <Route path="/dashboard" element={<AdminDashboard />}/>
          </Routes>
         </Router>
     </div>
