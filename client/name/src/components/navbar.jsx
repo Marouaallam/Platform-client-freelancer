@@ -15,8 +15,8 @@ export const Navbar =()=>{
               <a href="/">Skillance</a>
             </div>
             <div className='flex mr-32 ml-32 gap-8 '>
-              <Link to="/" className="text-decoration-line:none">Home</Link>
-              <Link to="/aboutus" className="text-decoration-line:none">AboutUs</Link>
+              <a href="/" className="text-decoration-line:none">Home</a>
+              <a href="#aboutus" className="text-decoration-line:none">AboutUs</a>
               <Link to="/contactus" className="text-decoration-line:none">ContactUs</Link>
               
             </div>

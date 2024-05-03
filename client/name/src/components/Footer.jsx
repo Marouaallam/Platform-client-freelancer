@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Footer = () => {
     return (
         <div className='relative'>
-          <div className='md:min-w-0 flex  items-center  py-4 px-14 '>
+          <div className='md:min-w-0 flex  items-center  py-4 px-20'>
               <div className='flex justify-center items-center gap-2 mr-52'>
                 <img src={logo} className='w-10 h-10'/>
                 <a href="/" style={{fontWeight:'600'}}>Skillance</a>

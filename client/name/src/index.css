@@ -101,7 +101,6 @@ h4{
 .project{
   max-width: 1300px;
   width: 100%;
-  margin: auto;
   padding:  0px 20px;
   font-family: 'SF pro display', sans-serif;
 }
@@ -113,9 +112,6 @@ section{
   padding-bottom: 10px;
 }
 
-.cards{
-  
-}
 
 .card{
   /* flex: 0 0 calc(33.33% - 20px);
@@ -127,6 +123,19 @@ section{
   margin-bottom: 20px;
   transition: .3s;
   border: 2px solid transparent;
+}
+
+.cardus{
+  /* flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px); */
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  transition: .3s;
+  border: 2px solid transparent;
+  height:300px
 }
 
 .card:hover{
