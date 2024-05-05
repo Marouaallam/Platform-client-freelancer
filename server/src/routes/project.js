@@ -21,5 +21,17 @@ router.post("/",async(req,res)=>{
         res.status(500).json({ error: error.message });
     }
 })
+router.delete('/:id',async(req,res) =>{
+    try{
+        const {id}=req.params
+        const projet=await projectModel.findByIdAndDelete(id);
+        if(!projet){
+            return res.status(404).json(`no project with id ${id}`)
+        }
+        res.status(200).send("project deleted !")
+    }catch(error){
+        res.status(500).json({msg :error.message});
+    }
+})
 
 export  {router as projectRouter}

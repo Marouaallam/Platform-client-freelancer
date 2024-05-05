@@ -11,6 +11,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Profile } from './pages/profile.jsx';
 import { AdminDashboard } from './pages/admin.jsx';
+import { Popup } from './components/popup';
+import { ProjectPopup } from './components/projectPopup';
 
 function App() {
   return(
@@ -23,6 +25,7 @@ function App() {
            <Route path="/signup" element={<Signup />}/>
            <Route path="/profile" element={<Profile />}/>
            <Route path="/dashboard" element={<AdminDashboard />}/>
+           <Route path="/popup" element={<ProjectPopup  />}/>
          </Routes>
         </Router>
     </div>
