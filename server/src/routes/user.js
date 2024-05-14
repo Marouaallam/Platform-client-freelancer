@@ -1,4 +1,5 @@
 import  express from 'express';
+import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import { userModel } from '../models/userModel.js'
@@ -46,5 +47,6 @@ router.post("/login",async(req,res)=>{
     const token =jwt.sign({ id: userExist._id},"secret");
     res.json({token,userID: userExist._id});
 });
+
 
 export  {router as userRouter}

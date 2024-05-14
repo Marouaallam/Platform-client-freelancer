@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 
 const projectSchema = new mongoose.Schema({
-    projectID: {
+    postedBy: {
         type: String,
         required: true
     },

@@ -9,9 +9,14 @@ import BannerImage from './components/BannerImage.jsx';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Freelancer } from './pages/freelancer.jsx';
+ import { Freelancer } from './pages/freelancer.jsx';
 import { CatFree } from './pages/catFree.jsx';
 import {Projectfree} from './pages/Projectfree.jsx';
+import { Profile } from './pages/profile.jsx';
+import { AdminDashboard } from './pages/admin.jsx';
+import { Popup } from './components/popup';
+import { ProjectPopup } from './components/projectPopup';
+
 
 function App() {
   return(
@@ -22,9 +27,14 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
+
            <Route path="/11" element={<Freelancer />} />
            <Route path="/22" element={<CatFree />} />
            <Route path="/33" element={<Projectfree />} />
+           <Route path="/profile" element={<Profile />}/>
+           <Route path="/dashboard" element={<AdminDashboard />}/>
+           <Route path="/popup" element={<ProjectPopup  />}/>
+
          </Routes>
         </Router>
     </div>

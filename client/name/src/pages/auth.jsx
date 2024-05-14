@@ -46,7 +46,7 @@ const Login =()=>{
   
         setCookies("access_token", result.data.token);
         window.localStorage.setItem("userID", result.data.userID);
-        navigate("/");
+        {email === "Admin@gmail.com" ? navigate("/dashboard"):navigate("/profile");}
       } catch (error) {
         console.error(error);
       }

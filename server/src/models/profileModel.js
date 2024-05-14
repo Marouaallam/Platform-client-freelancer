@@ -2,12 +2,9 @@ import mongoose from 'mongoose';
 
 
 const profileSchema = new mongoose.Schema({
-    profileID: {
-        type: String,
-        //required: true
-    },
     name: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"users",
         required: true
     },
     phone:{
@@ -38,10 +35,12 @@ const profileSchema = new mongoose.Schema({
         type:String,
     },
     comments: {
-        type: String,
+        text: String,
+        postedby:String
     },
     rating: {
         type: Number,
+
     },
 
 })
