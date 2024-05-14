@@ -9,6 +9,9 @@ import BannerImage from './components/BannerImage.jsx';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Freelancer } from './pages/freelancer.jsx';
+import { CatFree } from './pages/catFree.jsx';
+import {Projectfree} from './pages/Projectfree.jsx';
 
 function App() {
   return(
@@ -19,6 +22,9 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
+           <Route path="/11" element={<Freelancer />} />
+           <Route path="/22" element={<CatFree />} />
+           <Route path="/33" element={<Projectfree />} />
          </Routes>
         </Router>
     </div>
