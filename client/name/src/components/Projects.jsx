@@ -35,7 +35,19 @@ const Projects = () => {
                                 </div>
                                 <h3>{Projects.nomProjet}</h3>
                                 <p>{Projects.description}</p>
-                                <ProjectPopup />
+        
+                                 <ProjectPopup
+                                 image={Projects.image}
+                                 postedBy={Projects.postedBy}
+                                 nomProjet={Projects.nomProjet}
+                                 description={Projects.description}
+                                 dateDebut={Projects.dateDebut}
+                                 DDL={Projects.DDL}
+                                 skillsRequired={Projects.skillsRequired}
+                                 budget={Projects.budget}
+
+                                 
+                               />
                             </div>
                         ))
                     }

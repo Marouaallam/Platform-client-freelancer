@@ -33,5 +33,32 @@ router.delete('/:id',async(req,res) =>{
         res.status(500).json({msg :error.message});
     }
 })
+router.put('/:id',async(req,res) =>{
+    try{
+        const {id}=req.params;
+        const updates = req.body
+        const projet=await projectModel.findByIdAndUpdate(id, updates, { new: true });
+        if(!projet){
+            return res.status(404).json(`no project with id ${id}`)
+        }
+        res.status(200).send("project updated !")
+    }catch(error){
+        res.status(500).json({msg :error.message});
+    }
+})
+router.get('/:id',async(req,res) =>{
+    try{
+        const {id}=req.params;
+        const updates = req.body
+        const projet=await projectModel.findById(id, updates, { new: true });
+        if(!projet){
+            return res.status(404).json(`no project with id ${id}`)
+        }
+        res.status(200).send(projet)
+    }catch(error){
+        res.status(500).json({msg :error.message});
+    }
+})
+
 
 export  {router as projectRouter}
