@@ -53,7 +53,7 @@ export const Popup = () => {
     return(
         <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">Add Project</Button>
+          <Button variant="outline" className="ml-4 p-2 rounded  bg-sky-500">Add Project +</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

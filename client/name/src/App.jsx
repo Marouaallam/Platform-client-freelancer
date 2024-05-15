@@ -13,9 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { CatFree } from './pages/catFree.jsx';
 import {Projectfree} from './pages/Projectfree.jsx';
 import { Profile } from './pages/profile.jsx';
-import { AdminDashboard } from './pages/admin.jsx';
+import { Dashboard } from './pages/admin/dashboard.jsx';
 import { Popup } from './components/popup';
 import { ProjectPopup } from './components/projectPopup';
+import { User } from './pages/admin/user.jsx';
+import { Project } from './pages/admin/project.jsx';
+import { Report } from './pages/admin/report.jsx';
+
+
 
 
 function App() {
@@ -32,9 +37,11 @@ function App() {
            <Route path="/22" element={<CatFree />} />
            <Route path="/33" element={<Projectfree />} />
            <Route path="/profile" element={<Profile />}/>
-           <Route path="/dashboard" element={<AdminDashboard />}/>
+           <Route path="/dashboard" element={<Dashboard />}/>
+           <Route path="/dashboard/user" element={<User />}/>
+           <Route path="/dashboard/project" element={<Project />}/>
+           <Route path="/dashboard/report" element={<Report />}/>
            <Route path="/popup" element={<ProjectPopup  />}/>
-
          </Routes>
         </Router>
     </div>

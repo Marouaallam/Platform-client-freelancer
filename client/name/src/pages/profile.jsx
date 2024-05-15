@@ -6,10 +6,39 @@ import { Comments } from "../components/comments.jsx"
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 export const Profile =({}) =>{
-    
+    const [userData, setUserData] = useState(null);
+
+    const navigate = useNavigate();
+    useEffect(() => {
+        const verifyUserAndFetch = async () => {
+          const userID = localStorage.getItem("userID");
+          if (!userID) {
+            navigate("/auth");
+          } else {
+            // fetchData
+            try {
+              const res = await axios.get(`http://localhost:3001/auth/login/${userID}`, {
+                headers: {
+                  Authorization: `Bearer ${userID}`,
+                },
+                // set state
+              });
+              setUserData(res.data);
+              
+            } catch (error) {
+              // error while fetching probably token expired or invalid token
+              navigate("/auth");
+            }
+          }
+        };
+        verifyUserAndFetch();
+      }, []);
+      console.log(userData);
+
     return (
         <div className="" >
             <div className="grid">
@@ -29,7 +58,7 @@ export const Profile =({}) =>{
                 </div>
                 <div className=" ml-8 p-10 h-72 w-[500px] border rounded-md bg-[#f6f8ff85]">
                     <div className="font-bold">Basic info</div>
-                    <div className="py-2">Email</div>
+                    <div className="py-2">Email:{userData && userData.email}</div>
                     <div className="">Password</div>
                     <div className="pt-4 pb-2 font-bold">Career</div>
                     <div className="flex gap-6">
@@ -51,7 +80,7 @@ export const Profile =({}) =>{
                 </div>
             </div>
             <div className="flex ml-64 mt-16 ">
-                comments
+                
                 <Comments />
             </div>
         </div>

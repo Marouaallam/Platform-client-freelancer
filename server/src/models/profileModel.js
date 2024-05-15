@@ -2,10 +2,13 @@ import mongoose from 'mongoose';
 
 
 const profileSchema = new mongoose.Schema({
-    name: {
+    userID: {
         type: mongoose.Schema.Types.ObjectId,
         ref:"users",
         required: true
+    },
+    name:{
+       type:String,
     },
     phone:{
         type:String,

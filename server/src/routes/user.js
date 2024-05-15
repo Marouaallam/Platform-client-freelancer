@@ -45,8 +45,17 @@ router.post("/login",async(req,res)=>{
         return res.status(422).json({ error: "Password  not Correct" });
     }
     const token =jwt.sign({ id: userExist._id},"secret");
-    res.json({token,userID: userExist._id});
+    res.json({token,userID: userExist._id,user:userExist});
 });
 
-
+router.get("/login/:id", async (req, res) => {
+    try {
+      const {id}=req.params
+      const users = await userModel.findById(id);
+      res.json(users);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+  
 export  {router as userRouter}

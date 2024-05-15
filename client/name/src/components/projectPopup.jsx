@@ -15,31 +15,8 @@ import {
   } from "./ui/alert-dialog"
   import { Button } from "./ui/button"
 
-export const ProjectPopup = () => {
+export const ProjectPopup = ({ image, postedBy, nomProjet, description,budget,skillsRequired,dateDebut,DDL }) => {
     
-
-    const [postedBy,setPostedBy]=useState("");
-    const [nomProjet,setNomProjet]=useState("");
-    const [dateDebut,setDateDebut]=useState("");
-    const [DDL,setDDL]=useState("");
-    const [description,setDescription]=useState("");
-    const [budget,setBudget]=useState("");
-    const [skillsRequired,setSkillsRequired]=useState("");
-    const [image,setImage]=useState("");
-
-    const [cards,setCards] = useState([]);
-    useEffect(()=>{
-        const fetchcards= async()=>{
-        try{
-        const response= await axios.get("http://localhost:3001/project");
-        setCards(response.data)
-        }catch(err){
-            console.error(err)
-        }
-    }
-    fetchcards()
-    },[])
-  
     return(
         <AlertDialog>
         <AlertDialogTrigger asChild>
@@ -53,7 +30,29 @@ export const ProjectPopup = () => {
             <AlertDialogDescription>
               
             </AlertDialogDescription>
-            <h1>{ProjectPopup.dateDebut}</h1>
+            <div className="flex items-start">
+                                    <img
+                                        src={image}
+                                        alt="Image"
+                                        className="w-8 h-8 rounded mr-2"
+                                    />
+                                    <h4>{postedBy}</h4>
+                                </div>
+           
+            <h1 className='font-bold'>{nomProjet}</h1>
+            <h1>{description}</h1>
+            <h1 className='font-semibold'>Budget {budget}</h1>
+            <div className='flex  '>
+              <h1 className='font-semibold pr-2'>Date debut </h1>
+            <h1>{dateDebut}</h1>
+            <h1 className='font-semibold pl-6 pr-2'>DDL </h1>
+            <h1>{DDL}</h1>
+            </div>
+           <div className='flex'> 
+            <h1 className='pr-2 font-semibold'>Skills Required</h1>
+           <h1>{skillsRequired}</h1>
+           </div>
+           
           </AlertDialogHeader>
          
           <AlertDialogFooter>

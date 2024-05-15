@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Popup } from "@/components/popup";
+import { PopupUpdate } from "../components/popupUpdate";
 
 
 export const AdminDashboard = () => {
@@ -26,6 +27,7 @@ export const AdminDashboard = () => {
     fetchCards();
   }, []);
 
+
   return (
     <div className="admin-container">
       <div className="pl-40 pt-40 pb-24 font-bold text-3xl">
@@ -39,6 +41,16 @@ export const AdminDashboard = () => {
         {cards.map(project => (
             <div>
                  <button onClick={() => handleRemove(project._id)}>DELETE</button>
+                 <PopupUpdate 
+                  image={project.image}
+                  postedBy={project.postedBy}
+                  nomProjet={project.nomProjet}
+                  description={project.description}
+                  dateDebut={project.dateDebut}
+                  DDL={project.DDL}
+                  skillsRequired={project.skillsRequired}
+                  budget={project.budget}
+                 />
                  
           <div key={project._id} className="flex p-2 w-[900px] items-center bg-white rounded border hover:border-[#647DFF] cursor-pointer">
            <div>
