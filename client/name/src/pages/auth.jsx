@@ -65,7 +65,7 @@ const Login =()=>{
                   value={email}
                   placeholder='Email'
                   onChange={(event)=>setEmail(event.target.value)}
-                  className='mb-4 p-3 pr-96 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+                  className='mb-4 p-3 pr-96 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
 
                 />
              </div>
@@ -77,13 +77,13 @@ const Login =()=>{
                   value={password}
                   placeholder='Password'
                   onChange={(event)=>setPassword(event.target.value)}
-                  className='mb-4 p-3 pr-96 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+                  className='mb-4 p-3 pr-96 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
 
                 />
              </div>
              <div className='flex justify-end'>
              <button type='submit'
-             className=' mt-8 mb-32 py-2 px-6 bg-[#A2B1FF] border border-[#5C73EB] rounded-lg'
+             className=' mt-8 mb-32 py-2 px-6 bg-[#A2B1FF] border border-[#5C73EB] rounded-xl'
              >Next</button>
              </div>
              

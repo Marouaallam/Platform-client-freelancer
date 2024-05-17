@@ -8,7 +8,8 @@ import {  SideBar } from './drawer';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Popup } from "@/components/popup";
-import { PopupUpdate } from "../../components/popupUpdate";
+import { PopupUpdate } from '../../components/popupUpdate';
+
 
 const drawerWidth = 240;
 
@@ -94,7 +95,7 @@ export const Project=() => {
           <button className="ml-2 p-2 rounded  bg-rose-600" onClick={() => handleRemove(project._id) }>DELETE</button>
            </div>
            <div>      
-                 <PopupUpdate 
+                 <PopupUpdate
                   image={project.image}
                   postedBy={project.postedBy}
                   nomProjet={project.nomProjet}

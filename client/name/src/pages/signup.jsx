@@ -58,7 +58,7 @@ export const Signup =()=>{
             value={firstname}
             placeholder='First Name'
             onChange={(event) => setFirstname(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
            <div>
@@ -68,7 +68,7 @@ export const Signup =()=>{
             value={username}
             placeholder='Username'
             onChange={(event) => setUsername(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
            <div>
@@ -78,7 +78,7 @@ export const Signup =()=>{
             value={email}
             placeholder='Email'
             onChange={(event) => setEmail(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
         </div>
@@ -90,7 +90,7 @@ export const Signup =()=>{
             value={lastname}
             placeholder='Last Name'
             onChange={(event) => setLastname(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
           
@@ -101,7 +101,7 @@ export const Signup =()=>{
             value={phone}
             placeholder='Phone Number'
             onChange={(event) => setphone(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
           
@@ -112,14 +112,14 @@ export const Signup =()=>{
             value={password}
             placeholder='Password'
             onChange={(event) => setPassword(event.target.value)}
-            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-lg focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+            className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
         </div> 
         </div>  
         <div className='flex justify-end'>
              <button type='submit'
-             className=' mt-8 mb-32 mr-32 py-2 px-6 bg-[#A2B1FF] border border-[#5C73EB] rounded-lg'
+             className=' mt-8 mb-32 mr-32 py-2 px-6 bg-[#A2B1FF] border border-[#5C73EB] rounded-xl'
              >Next</button>
         </div>
         </form>
