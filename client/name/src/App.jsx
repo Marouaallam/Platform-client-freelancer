@@ -16,6 +16,8 @@ import { ProjectPopup } from './components/projectPopup';
 import { User } from './pages/admin/user.jsx';
 import { Project } from './pages/admin/project.jsx';
 import { Report } from './pages/admin/report.jsx';
+import { Chat } from './pages/Chat.jsx';
+import { Reports } from './pages/report.jsx';
 
 
 
@@ -34,6 +36,8 @@ function App() {
            <Route path="/dashboard/project" element={<Project />}/>
            <Route path="/dashboard/report" element={<Report />}/>
            <Route path="/popup" element={<ProjectPopup  />}/>
+           <Route path="/profile/chat" element={<Chat  />}/>
+           <Route path="/profile/report" element={<Reports  />}/>
           
          </Routes>
         </Router>

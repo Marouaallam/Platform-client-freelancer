@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const SideBar =() =>{
     return (
-        <div className=" fixed w-1/6 bg-[#647DFF]  h-full text-white">
+        <div className="   w-1/6 bg-[#647DFF]  h-full text-white">
             <div className="mt-24  ">
                <div className='mx-20 mt-6'>
                    <Link to="/" className="text-decoration-line:none hover:text-[#283263] ">
@@ -16,10 +16,6 @@ export const SideBar =() =>{
                <div className='mx-20 mt-6'>
                    <Link to="/profile/chat" className="text-decoration-line:none hover:text-[#283263] ">
                     Chat</Link>
-               </div>
-               <div className='mx-20 mt-6'>
-                   <Link to="/profile/report" className="text-decoration-line:none hover:text-[#283263] ">
-                    Report</Link>
                </div>
              
             </div>
