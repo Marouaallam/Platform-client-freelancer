@@ -74,7 +74,7 @@ export const Project=() => {
       
       <div className="ml-4 space-y-2">
         <div className="font-bold text-xl">Projects 
-        <Popup />
+       
             
         </div>
         {cards.map(project => (
@@ -94,18 +94,7 @@ export const Project=() => {
           <div>
           <button className="ml-2 p-2 rounded  bg-rose-600" onClick={() => handleRemove(project._id) }>DELETE</button>
            </div>
-           <div>      
-                 <PopupUpdate
-                  image={project.image}
-                  postedBy={project.postedBy}
-                  nomProjet={project.nomProjet}
-                  description={project.description}
-                  dateDebut={project.dateDebut}
-                  DDL={project.DDL}
-                  skillsRequired={project.skillsRequired}
-                  budget={project.budget}
-                 />
-                 </div>
+           
                  
           </div>
         ))}
