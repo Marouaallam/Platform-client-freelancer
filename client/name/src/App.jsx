@@ -34,7 +34,6 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
-
            <Route path="/11" element={<Freelancer />} />
            <Route path="/22" element={<CatFree />} />
            <Route path="/33" element={<Projectfree />} />
@@ -44,12 +43,10 @@ function App() {
            <Route path="/dashboard/project" element={<Project />}/>
            <Route path="/dashboard/report" element={<Report />}/>
            <Route path="/popup" element={<ProjectPopup  />}/>
-<<<<<<< HEAD
            <Route path="/profile/chat" element={<Chat  />}/>
            <Route path="/profile/report" element={<Reports  />}/>
-          
-=======
->>>>>>> fa63f1d9cb21774c4c7338c9c67e861cb77f74da
+
+
          </Routes>
         </Router>
     </div>
