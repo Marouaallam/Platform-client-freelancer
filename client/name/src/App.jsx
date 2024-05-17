@@ -9,6 +9,9 @@ import BannerImage from './components/BannerImage.jsx';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+ import { Freelancer } from './pages/freelancer.jsx';
+import { CatFree } from './pages/catFree.jsx';
+import {Projectfree} from './pages/Projectfree.jsx';
 import { Profile } from './pages/profile.jsx';
 import { Dashboard } from './pages/admin/dashboard.jsx';
 import { Popup } from './components/popup';
@@ -21,6 +24,7 @@ import { Reports } from './pages/report.jsx';
 
 
 
+
 function App() {
   return(
     <div className="App">
@@ -30,15 +34,22 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
+
+           <Route path="/11" element={<Freelancer />} />
+           <Route path="/22" element={<CatFree />} />
+           <Route path="/33" element={<Projectfree />} />
            <Route path="/profile" element={<Profile />}/>
            <Route path="/dashboard" element={<Dashboard />}/>
            <Route path="/dashboard/user" element={<User />}/>
            <Route path="/dashboard/project" element={<Project />}/>
            <Route path="/dashboard/report" element={<Report />}/>
            <Route path="/popup" element={<ProjectPopup  />}/>
+<<<<<<< HEAD
            <Route path="/profile/chat" element={<Chat  />}/>
            <Route path="/profile/report" element={<Reports  />}/>
           
+=======
+>>>>>>> fa63f1d9cb21774c4c7338c9c67e861cb77f74da
          </Routes>
         </Router>
     </div>

@@ -60,7 +60,7 @@ const dataP = [
         img:'/profilG.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'programmer',
         description: 'I offer coding website and mobile app i have 3 years of the experience in this fields.'
@@ -69,7 +69,7 @@ const dataP = [
         img:'/profilG.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'UI/UX Designer',
         description: 'With 3 years of UI/UX design experience, I create intuitive digital experiences blending aesthetics with functionality, from wireframing to prototyping.'
@@ -78,7 +78,7 @@ const dataP = [
         img:'/profilB.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'Digital marketer',
         description: 'With 3 years in digital marketing, I drive brand visibility and conversion growth through targeted strategies spanning SEO, content, social media, and analytics.'
@@ -87,7 +87,7 @@ const dataP = [
         img:'/profilB.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'Tutor',
         description: 'As a tutor for 3 years, I empower students with personalized support across subjects, fostering academic excellence and confidence in learning.'
@@ -96,7 +96,7 @@ const dataP = [
         img:'/profilG.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: '3D Designer',
         description: 'With 3 years of 3D design expertise, I bring creative visions to life through stunning visualizations and immersive experiences for various industries.'
@@ -105,7 +105,7 @@ const dataP = [
         img:'/profilG.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'Musician',
         description: 'With 3 years of musical experience, I captivate audiences with my performances, blending passion and skill to create unforgettable musical moments.'
@@ -114,7 +114,7 @@ const dataP = [
         img:'/profilB.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'Translator',
         description: 'Leveraging 3 years of translation expertise, I bridge language barriers with precision and cultural sensitivity, ensuring seamless communication across diverse audiences.'
@@ -123,7 +123,7 @@ const dataP = [
         img:'/profilB.png',
         name:'NAME',
         rating: '4.8',
-        price: '$17.00/h',
+        price: '1700DA/h',
         job: '6 Jobs',
         jobName: 'Writer',
         description: 'Leveraging 3 years of translation expertise, I bridge language barriers with precision and cultural sensitivity, ensuring seamless communication across diverse audiences.'

@@ -40,7 +40,7 @@ export const Signup =()=>{
           <img src={logo} className='w-12 h-12'/>
         </div>
         <div className='flex justify-center  mt-4  '>
-           <p className='text-xl font-bold'>Skillance</p>
+           <a href='\' className='text-xl font-bold'>Skillance</a>
         </div>
           
         <div className='flex justify-center mt-10 text-5xl font-bold ' >
@@ -124,6 +124,7 @@ export const Signup =()=>{
         </div>
         </form>
        
+        <a href='/auth' className="profilink" style={{fontSize:'14px', marginBottom:'50px', marginLeft:'175px'}}>Already have an account?</a>
        
     </div>
    )
