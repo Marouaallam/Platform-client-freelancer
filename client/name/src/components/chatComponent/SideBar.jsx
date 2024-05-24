@@ -17,6 +17,10 @@ export const SideBar =() =>{
                    <Link to="/profile/chat" className="text-decoration-line:none hover:text-[#283263] ">
                     Chat</Link>
                </div>
+               <div className='mx-20 mt-6'>
+                   <Link to="/profile/report" className="text-decoration-line:none hover:text-[#283263] ">
+                    Report</Link>
+               </div>
              
             </div>
      

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import logo from '../assets/skillance.png';
 
 export const Signup =()=>{
-
+   
    const [firstname, setFirstname] = useState("");
    const [lastname, setLastname] = useState("");
    const [username, setUsername] = useState("");
@@ -19,7 +19,7 @@ export const Signup =()=>{
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/auth/signup", {
+      const response=await axios.post("http://localhost:3001/auth/signup", {
         firstname,
         lastname,
         username,
@@ -27,12 +27,18 @@ export const Signup =()=>{
         email,
         password,
       });
+      const userID = response.data._id; 
+      await axios.post("http://localhost:3001/profile", {
+        userID
+      })
       alert("Registration Completed! Now login.");
       navigate("/auth");
     } catch (error) {
       console.error(error);
     }
+
   };
+  
 
    return(
     <div className='' >

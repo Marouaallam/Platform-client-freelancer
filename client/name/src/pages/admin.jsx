@@ -42,6 +42,7 @@ export const AdminDashboard = () => {
             <div>
                  <button onClick={() => handleRemove(project._id)}>DELETE</button>
                  <PopupUpdate 
+                  id={project._id}
                   image={project.image}
                   postedBy={project.postedBy}
                   nomProjet={project.nomProjet}

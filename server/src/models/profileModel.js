@@ -1,32 +1,18 @@
 import mongoose from 'mongoose';
 
-
 const profileSchema = new mongoose.Schema({
-    userID: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref:"users",
-        required: true
+    userID:{
+      type:String
     },
     name:{
        type:String,
     },
-    phone:{
+    type:{
         type:String,
-        required:true,
-        unique:true,
-    },
-    email: {
-        type: String,
-        required: true,
-        unique:true,
-    },
-    password: {
-        type: String,
-        required: true
-    },
+     },
     description: {
-        type: String,
-        required: true
+        type: String
+       
     },
     img: {
         type: String,
@@ -37,15 +23,9 @@ const profileSchema = new mongoose.Schema({
     jobs:{
         type:String,
     },
-    comments: {
-        text: String,
-        postedby:String
-    },
-    rating: {
-        type: Number,
-
-    },
-
+    rating:{
+        type:Number
+    }
 })
 
 //* Collection Creation

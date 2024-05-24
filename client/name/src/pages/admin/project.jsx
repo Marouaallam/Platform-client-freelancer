@@ -36,11 +36,16 @@ export const Project=() => {
     };
     
     const handleRemove = (projectId) => {
+      if(confirm('Are you sure you want to delete this?')) {
         axios.delete(`http://localhost:3001/project/${projectId}`)
           .then(() => {
             setCards(cards.filter(project => project._id !== projectId));
           })
           .catch(err => console.error(err));
+        }else {
+          // Do nothing!
+          console.log('Thing was not deleted.');
+        }
       };
     
       const [cards, setCards] = useState([]);

@@ -24,15 +24,44 @@ router.post("/signup",async(req,res)=>{
         const user = new userModel({ firstname,lastname, email, phone, password: hashedPassword,username  });
         // Hashing the password will occur here!
         await user.save();
-        res.status(201).json({ message: "User registered successfully" })
+        res.status(201).json({ message: "User registered successfully", _id: user._id })
     }
 }
 catch (err) {
     console.log("🚀 ~ file: user.js:47 ~ router.post ~ err", err)
 }
 });
+router.get("/signup/:id", async (req, res) => {
+    try {
+      const {id}=req.params
+      const users = await userModel.findById(id);
+      res.json(users);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+  router.get("/signup", async (req, res) => {
+    try {
   
+      const users = await userModel.find({});
+      res.json(users);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
 
+  router.delete('/signup/:id',async(req,res) =>{
+    try{
+        const {id}=req.params
+        const user=await userModel.findByIdAndDelete(id);
+        if(!user){
+            return res.status(404).json(`no user with id ${id}`)
+        }
+        res.status(200).send("report deleted !")
+    }catch(error){
+        res.status(500).json({error :error.message});
+    }
+})
 router.post("/login",async(req,res)=>{
     const {email,password}=req.body;
     const userExist = await userModel.findOne({ email }); 
