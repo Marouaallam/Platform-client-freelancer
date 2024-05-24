@@ -17,7 +17,7 @@ router.post("/",async(req,res)=>{
     try{
        const response = await projects.save();
        res.json(response);
-    }catch{
+    }catch(error){
         res.status(500).json({ error: error.message });
     }
 })

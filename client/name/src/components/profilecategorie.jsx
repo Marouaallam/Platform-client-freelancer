@@ -53,7 +53,7 @@ const data = [
         description: 'User interface and user experience',
         name:'UI/UX',
         img:'/UiUx.png',
-        src:'/uiproject'
+        src:'/profile/uiproject'
     },
     {
         description: 'User interface and user experience',

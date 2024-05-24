@@ -7,19 +7,11 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import TopicOutlinedIcon from '@mui/icons-material/TopicOutlined';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import { TopBar } from './TopBar';
 import {  SideBar } from './drawer';
+import { HiMiniUsers } from "react-icons/hi2";
 
 const drawerWidth = 240;
 
@@ -92,7 +84,40 @@ export const  Dashboard = () =>{
         <DrawerHeader />
        
         <Typography paragraph>
-          YO YO MY NAME'S MO KANSKITI
+          <div className='flex ml-24 mt-8 gap-6 '>
+             <div className='w-68 h-84 p-6 border rounded-xl hover:bg-[#cdcaeb] cursor-pointer'>
+              <div className='flex mt-20'>
+                <div className='flex-grow'> 
+                 <p className='text-xl font-semibold mb-8'>Users' Number</p>
+                </div>
+                <HiMiniUsers size={30} /> 
+              </div>
+              <span className='text-3xl font-semibold'>143</span>
+              <div className='text-sm mt-12 text-gray-400'>+209 users Added every week</div>
+              </div>
+             <div className='space-y-4'>
+             <div className='w-68 h-44 p-6 border rounded-xl hover:bg-[#cdcaeb] cursor-pointer'>
+              <div className='flex '>
+                <div className='flex-grow'> 
+                 <p className='text-xl font-semibold mb-8'>Projects' Number</p>
+                </div>
+                <TopicOutlinedIcon size={30}/>
+              </div>
+              <span className='text-3xl font-semibold'>10,499</span>
+              <div className='text-sm mt-6 text-gray-400'>+909 projects Added every week</div>
+             </div>
+             <div className='w-68 h-44 p-6 border rounded-xl hover:bg-[#cdcaeb] cursor-pointer'>
+              <div className='flex '>
+                <div className='flex-grow'> 
+                 <p className='text-xl font-semibold mb-8'>Reports' Number</p>
+                </div>
+                <AssessmentOutlinedIcon size={30} />
+              </div>
+              <span className='text-3xl font-semibold'>9</span>
+             </div>
+             </div>
+          </div>
+          
         </Typography>
       </Box>
     </Box>
