@@ -7,6 +7,10 @@ import { projectRouter } from './routes/project.js';
 import { reportRouter } from './routes/report.js';
 import { gigsRouter } from './routes/gigs.js';
 import { commentRouter } from './routes/comment.js';
+import { chatRouter } from './routes/chat.js';
+import { messageRouter } from './routes/message.js';
+
+
 
 
 const app = express();
@@ -19,6 +23,8 @@ app.use("/project",projectRouter);
 app.use("/report",reportRouter);
 app.use("/gigs",gigsRouter);
 app.use("/comment",commentRouter);
+app.use("/chat",chatRouter);
+app.use("/message",messageRouter);
 
 mongoose.connect(
     "mongodb+srv://marouaallal12:x1ByVDBbLuBe5vy2@pfe.ocszwnj.mongodb.net/PFE?retryWrites=true&w=majority&appName=PFE"
