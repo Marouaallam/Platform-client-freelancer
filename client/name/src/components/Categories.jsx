@@ -35,8 +35,7 @@ const Categories = () => {
                         <p>{d.description}</p>
                         <p className="text-gray-900 font-bold text-3xl">{d.name}</p>
                     </div>
-
-                    <a href="" className="m-auto h-32 w-auto rounded-t-xl flex justify-center items-center" >
+                    <a href={d.src} className="m-auto h-32 w-auto rounded-t-xl flex justify-center items-center" >
                         <img src={d.img} alt="" className="h-32 w-auto"/>
                     </a>
                 </div>
@@ -51,7 +50,8 @@ const data = [
     {
         description: 'User interface and user experience',
         name:'UI/UX',
-        img:'/UiUx.png'
+        img:'/UiUx.png',
+        src:'/uigigs'
     },
     {
         description: 'User interface and user experience',

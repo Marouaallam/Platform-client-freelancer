@@ -18,8 +18,8 @@ router.get("/",async(req,res)=>{
     try{
        const response=await commentModel.find({});
        res.json(response);
-    }catch{
-       res.json(err)
+    }catch(error){
+       res.json(error)
     }
 })
 router.delete('/:id',async(req,res) =>{

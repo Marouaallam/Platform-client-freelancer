@@ -93,9 +93,11 @@ export const SideBar=({open,handleDrawerClose}) =>{
       </IconButton>
     </DrawerHeader>
     <Avatar
+    
     sx={{mx: "auto",width:"55" ,height:"55",mt:2}}
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToCDlginZPXtHrX80AfWGtefluFyC2aK-BJg0HU4LGrw&s" />
-    <Typography align='center'>ALLAM AMOUCHE</Typography>
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToCDlginZPXtHrX80AfWGtefluFyC2aK-BJg0HU4LGrw&s" 
+     />
+    <Typography align='center' >ALLAM AMOUCHE</Typography>
     <Divider />
     <List>
       {Array1.map((item) => (

@@ -1,27 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Popup } from './Popup';
-import { PopupUpdate } from './popupUpdate';
 import { MdDelete } from "react-icons/md";
 import { SideBar } from '@/components/sideBar';
 
 
-export const Uiprofile=() =>{
+export const Uigigs=() =>{
   const userID = window.localStorage.getItem("userID");
-    const handleRemove = (projectId) => {
-      if(confirm('Are you sure you want to delete this?')) {
-        axios.delete(`http://localhost:3001/gigs/${projectId}`)
-          .then(() => {
-            setCards(cards.filter(project => project._id !== projectId));
-          })
-          .catch(err => console.error(err));
-        }else {
-          // Do nothing!
-          console.log('Thing was not deleted.');
-        }
-      };
-    
+   
       const [cards, setCards] = useState([]);
     
       useEffect(() => {
@@ -39,12 +25,10 @@ export const Uiprofile=() =>{
     
       return (
         <div className="">
-          <div className="grid">
-              <SideBar />  
+          <div className="grid"> 
             </div>
           <div className="ml-56  space-y-2">
-            <div className="font-bold mt-20 ml-8 text-2xl">UI/UIX Projects 
-            <Popup/>   
+            <div className="font-bold mt-20 ml-8 text-2xl">UI/UIX Projects   
             </div>
             <div className=" cards grid gap-x-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{margin: '30px'}}>
             {cards.map(project => (
@@ -61,15 +45,7 @@ export const Uiprofile=() =>{
                   />
                 </div>
               </div>
-                    <div className=' flex items-center mb-1 ml-48'>
-                    <MdDelete className="cursor-pointer" onClick={() => handleRemove(project._id)}/>
-                     <PopupUpdate
-                      id={project._id}
-                      image={project.image}
-                      namegigs={project.namegigs}
-                      description={project.description}
-                     />
-                     </div>
+                    
               </div>
                ) : null  
           ))}

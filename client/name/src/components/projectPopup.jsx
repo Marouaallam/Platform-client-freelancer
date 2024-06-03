@@ -15,8 +15,21 @@ import {
   } from "./ui/alert-dialog"
   import { Button } from "./ui/button"
 
-export const ProjectPopup = ({ image, postedBy, nomProjet, description,budget,skillsRequired,dateDebut,DDL }) => {
-    
+export const ProjectPopup = ({receiverId,projectId, image, postedBy, nomProjet, description,budget,skillsRequired,dateDebut,DDL }) => {
+  const userID = window.localStorage.getItem("userID");
+  const handleApply = async () => {
+    try {
+      await axios.post("http://localhost:3001/notification", {
+        senderId: userID,
+        receiverId: receiverId,
+        projectId: projectId,
+      });
+      alert('You applied successfully!!');
+    } catch (error) {
+      console.error("Failed to send notification:", error);
+      alert('Failed to apply. Please try again.');
+    }
+  };
     return(
         <AlertDialog>
         <AlertDialogTrigger asChild>
@@ -52,6 +65,9 @@ export const ProjectPopup = ({ image, postedBy, nomProjet, description,budget,sk
             <h1 className='pr-2 font-semibold'>Skills Required</h1>
            <h1>{skillsRequired}</h1>
            </div>
+           <button className='hover:underline' onClick={handleApply}>
+            Appliquer
+            </button>
            
           </AlertDialogHeader>
          

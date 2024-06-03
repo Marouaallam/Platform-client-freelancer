@@ -22,6 +22,8 @@ import { Payement } from './pages/payement';
 import { AdminDashboard } from './pages/admin';
 import { Uiprofile } from './pages/freeGigs/uiprofile';
 import { ProfileFree } from './pages/ProfileFreeForClient';
+import { Uigigs } from './components/categoriesProjects';
+import { ProfileClient } from './pages/profileClient';
 
 
 
@@ -34,10 +36,11 @@ function App() {
          <Routes>
            <Route path="/" element={<Home />}/>
            <Route path="/auth" element={<Auth />}/>
+           <Route path="/auth" element={<Auth />}/>
            <Route path="/signup" element={<Signup />}/>
            <Route path="/11" element={<Freelancer />} />
            <Route path="/22" element={<CatFree />} />
-           <Route path="/33" element={<Projectfree />} />
+           <Route path="/project/:id" element={<Projectfree />} />
            <Route path="/profile" element={<Profile />}/>
            <Route path="/dashboard" element={<Dashboard />}/>
            <Route path="/dashboard/user" element={<User />}/>
@@ -47,9 +50,11 @@ function App() {
            <Route path="/profile/chat" element={<Chat  />}/>
            <Route path="/profile/report" element={<Reports  />}/>
            <Route path="/admin" element={<AdminDashboard />}/>
+           <Route path="/profileclient" element={<ProfileClient />}/>
            <Route path="/profile/chat/payement" element={<Payement />}/>
            <Route path="/profile/uiproject" element={<Uiprofile />}/>
            <Route path="/profilefree/:id" element={<ProfileFree />}/>
+           <Route path="/uigigs" element={<Uigigs />}/>
 
 
          </Routes>
