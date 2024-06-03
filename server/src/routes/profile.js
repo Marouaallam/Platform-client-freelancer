@@ -18,7 +18,7 @@ router.get("/",async(req,res)=>{
     try{
        const response=await profileModel.find({});
        res.json(response);
-    }catch{
+    }catch(err){
        res.json(err)
     }
 })

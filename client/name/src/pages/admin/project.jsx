@@ -97,7 +97,7 @@ export const Project=() => {
             <p className="text-[8px]">{project.description}</p>
           </div>
           <div>
-          <button className="ml-2 p-2 rounded  bg-rose-600" onClick={() => handleRemove(project._id) }>DELETE</button>
+          <button className="ml-2 p-2 rounded  bg-rose-600" onClick={() => handleRemove(project._id) }>HIDE</button>
            </div>
            
                  

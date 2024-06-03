@@ -8,6 +8,7 @@ import AboutUs from "../components/AboutUs"
 import  {NavbarFree} from "../components/NavbarFree"
 
 export const Freelancer =() =>{
+    
     return (
         <div>
         <NavbarFree />

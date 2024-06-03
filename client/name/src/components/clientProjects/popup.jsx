@@ -19,9 +19,14 @@ import {
 export const Popup = () => {
     
 
-    const [namegigs,setNamegigs]=useState("");
+    const [postedBy,setPosedBy]=useState("");
     const [description,setDescription]=useState("");
     const [image,setImage]=useState("");
+    const [nomProjet,setNomProjet]=useState("");
+    const [dateDebut,setDateDebut]=useState("");
+    const [DDL,setDDL]=useState("");
+    const [budget,setbudget]=useState("");
+    const [skillsRequired,setSkillsRequired]=useState("");
 
     const navigate = useNavigate();
 
@@ -31,9 +36,14 @@ export const Popup = () => {
       event.preventDefault();
   
       try {
-        const result = await axios.post("http://localhost:3001/gigs", {
+        const result = await axios.post("http://localhost:3001/project", {
           userID:userID,
-          namegigs,
+          postedBy,
+          nomProjet,
+          dateDebut,
+          DDL,
+          budget,
+          skillsRequired,
           description, 
           image
         });
@@ -60,9 +70,54 @@ export const Popup = () => {
           <input 
                   type="text"
                   id="postedBy"
-                  value={namegigs}
+                  value={postedBy}
+                  placeholder='postedBy'
+                  onChange={(event)=>setPosedBy(event.target.value)}
+                  className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+
+                />
+                 <input 
+                  type="text"
+                  id=""
+                  value={nomProjet}
                   placeholder='Name Projet'
-                  onChange={(event)=>setNamegigs(event.target.value)}
+                  onChange={(event)=>setNomProjet(event.target.value)}
+                  className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+
+                />
+                 <input 
+                  type="text"
+                  id="postedBy"
+                  value={dateDebut}
+                  placeholder='date Debut'
+                  onChange={(event)=>setDateDebut(event.target.value)}
+                  className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+
+                />
+                 <input 
+                  type="text"
+                  id="ddl"
+                  value={DDL}
+                  placeholder='DDL'
+                  onChange={(event)=>setDDL(event.target.value)}
+                  className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+
+                />
+                 <input 
+                  type="text"
+                  id="budget"
+                  value={budget}
+                  placeholder='BUDGET'
+                  onChange={(event)=>setbudget(event.target.value)}
+                  className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
+
+                />
+                 <input 
+                  type="text"
+                  id="skillsRequired"
+                  value={skillsRequired}
+                  placeholder='skills required'
+                  onChange={(event)=>setSkillsRequired(event.target.value)}
                   className='mb-4 p-1 pr-56 bg-[#E3E7FC] border border-[#5C73EB] rounded focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
 
                 />

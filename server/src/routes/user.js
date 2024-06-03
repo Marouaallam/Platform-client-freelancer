@@ -7,10 +7,10 @@ import { userModel } from '../models/userModel.js'
 const router =express.Router();
 
 router.post("/signup",async(req,res)=>{
-   const {firstname,lastname,phone,username,email,password}=req.body;
+   const {firstname,lastname,phone,username,email,password,role}=req.body;
    
    
-   if (!firstname || !lastname || !phone || !password || !email || !username) {             // If user doesn't fill any of the values then it will simply return error
+   if (!firstname || !lastname || !phone || !password || !email || !username ||!role) {             // If user doesn't fill any of the values then it will simply return error
     return res.status(422).json({ error: "Pls fill all the values properly!" });
    }
     
@@ -21,7 +21,7 @@ router.post("/signup",async(req,res)=>{
         return res.status(422).json({ error: "Email already Exist" });
     }else {
         const hashedPassword =await bcrypt.hash(password,10);
-        const user = new userModel({ firstname,lastname, email, phone, password: hashedPassword,username  });
+        const user = new userModel({ firstname,lastname, email, phone, password: hashedPassword,username,role  });
         // Hashing the password will occur here!
         await user.save();
         res.status(201).json({ message: "User registered successfully", _id: user._id })

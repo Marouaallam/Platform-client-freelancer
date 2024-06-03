@@ -9,12 +9,15 @@ const Projects = () => {
         try{
         const response= await axios.get("http://localhost:3001/project");
         setCards(response.data)
+        console.log(response.data)
+        
         }catch(err){
             console.error(err)
         }
     }
     fetchcards()
     },[])
+    console.log(cards)
         
   return (
     <div className=" py-10">
@@ -24,7 +27,7 @@ const Projects = () => {
                 <div className=" cards grid gap-x-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{margin: '30px'}}>
                     {
                         cards.map((Projects,i) => (
-                            <div className="card w-full ">
+                            <div key={i} className="card w-full ">
                                 <div className="flex items-start">
                                     <img
                                         src={Projects.image}
@@ -37,6 +40,8 @@ const Projects = () => {
                                 <p>{Projects.description}</p>
         
                                  <ProjectPopup
+                                 receiverId={Projects.userID}
+                                 projectId={Projects && Projects._id}
                                  image={Projects.image}
                                  postedBy={Projects.postedBy}
                                  nomProjet={Projects.nomProjet}

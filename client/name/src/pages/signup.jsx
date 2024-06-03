@@ -15,6 +15,7 @@ export const Signup =()=>{
    const [password, setPassword] = useState("");
 
    const navigate = useNavigate();
+   const [role, setRole] = useState('freelancer');
 
    const handleSubmit = async (event) => {
     event.preventDefault();
@@ -26,6 +27,7 @@ export const Signup =()=>{
         phone,
         email,
         password,
+        role
       });
       const userID = response.data._id; 
       await axios.post("http://localhost:3001/profile", {
@@ -121,6 +123,29 @@ export const Signup =()=>{
             className='mb-4 p-3 pr-64 bg-[#E3E7FC] border border-[#5C73EB] rounded-xl focus:border-[#5C73EB] focus:border-2 focus:outline-none focus:ring-0'
             />
            </div>
+           <div className='mb-4'>
+          <label className='mr-2'>I am a:</label>
+          <input
+            type='radio'
+            id='freelancer'
+            name='role'
+            value='freelancer'
+            checked={role === 'freelancer'}
+            onChange={() => setRole('freelancer')}
+            className='mr-2'
+          />
+          <label htmlFor='freelancer' className='mr-4'>Freelancer</label>
+          <input
+            type='radio'
+            id='client'
+            name='role'
+            value='client'
+            checked={role === 'client'}
+            onChange={() => setRole('client')}
+            className='mr-2'
+          />
+          <label htmlFor='client'>Client</label>
+        </div>
         </div> 
         </div>  
         <div className='flex justify-end'>

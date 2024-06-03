@@ -30,13 +30,12 @@ const ProfileCategories = () => {
     <div className="w-3/4 m-auto mb-16">
        <div>
         <Slider className="py-4" {...settings}>
-            {data.map ((d) => (
-                <div className=" p-5 h-80 w-auto text-black  flex flex-col justify-center items-center rounded-xl bg-indigo-200 shadow " style={{backgroundColor : '#C4CCF9'}}>
+            {data.map ((d,i) => (
+                <div key={i} className=" p-5 h-80 w-auto text-black  flex flex-col justify-center items-center rounded-xl bg-indigo-200 shadow " style={{backgroundColor : '#C4CCF9'}}>
                     <div className="flex flex-col  justify-center items-start g-4 p-4">
                         <p>{d.description}</p>
                         <p className="text-gray-900 font-bold text-2xl">{d.name}</p>
                     </div>
-
                     <Link to={d.src} className="m-auto h-32 w-auto rounded-t-xl flex justify-center items-center" >
                         <img src={d.img} alt="" className="h-32 w-auto"/>
                     </Link>

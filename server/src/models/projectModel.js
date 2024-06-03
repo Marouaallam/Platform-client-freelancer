@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 
 
 const projectSchema = new mongoose.Schema({
+    userID:{
+    type:String,
+    },
     postedBy: {
         type: String,
         required: true

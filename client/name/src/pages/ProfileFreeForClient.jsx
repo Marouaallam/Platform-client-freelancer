@@ -10,13 +10,25 @@ import { ProfilePopup } from "@/components/ProfilePopup.jsx";
 import StarIcon from '@mui/icons-material/Star';
 
 export const ProfileFree = ({}) => {
+    const userID = window.localStorage.getItem("userID");
     const { id } = useParams();
     const [profiles, setProfiles] = useState(null);
     const [comment, setComment] = useState([]);
     const [averageRating, setAverageRating] = useState(0);
     const [userData, setUserData] = useState([]);
 
-    const navigate = useNavigate();
+    const handleHire = async () => {
+        try {
+          await axios.post("http://localhost:3001/notification", {
+            senderId: userID,
+            receiverId:profiles.userID ,
+          });
+          alert('You Hired this freelancer !!');
+        } catch (error) {
+          console.error("Failed to send notification:", error);
+          alert('Failed to hire. Please try again.');
+        }
+      };
     
     useEffect(() => {
         const fetchComments = async () => {
@@ -49,11 +61,10 @@ export const ProfileFree = ({}) => {
                 setUserData(res.data);
             } catch (error) {
                 console.log(error);
-                navigate("/auth");
             }
         };
         fetchUserData();
-    }, [navigate]);
+    }, []);
 
     useEffect(() => {
         if (comment.length > 0 && profiles) {
@@ -83,6 +94,11 @@ export const ProfileFree = ({}) => {
                                   <p>{user.username}</p>
                                 </div>
                                 <p className="text-center text-[8px] text-slate-400 mt-3">{profiles.description}</p>
+                                <button variant="outline" className="mt-2 ml-20 p-1 rounded px-6 bg-[#A2B1FF] font-semibold " 
+                                onClick={()=>handleHire()}>
+                                    Hire
+                                </button>
+                
                             </div>
                         ) : null
                     ))}
@@ -101,7 +117,7 @@ export const ProfileFree = ({}) => {
                             <p>{averageRating}</p>
                         </div>
                     </div>
-                </div>
+                    </div>
             </div>
             <div className="flex ml-64 mt-8 text-2xl font-bold">
                 Gigs
